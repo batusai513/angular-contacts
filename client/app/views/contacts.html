@@ -1,0 +1,17 @@
+<input type="search" class="form-control" placeholder="Search" ng-model="query">
+<table class="table table-hover table-bordered">
+	<tr>
+		<th ng-repeat="field in fields" ng-click="sort(field)">
+			{{field | labelCase}}
+			<span ng-show="sort.field === field && !sort.order" class="fa fa-sort-desc"></span>
+			<span ng-show="sort.field === field && sort.order" class="fa fa-sort-asc"></span>
+		</th>
+	</tr>
+	<tbody>
+		<tr ng-click="showContact(contact.id)" ng-repeat="contact in contacts | filter: query | orderBy: sort.field : sort.order">
+			<td ng-repeat="field in fields">
+				{{ contact[field][0] }}
+			</td>
+		</tr>
+	</tbody>
+</table>
