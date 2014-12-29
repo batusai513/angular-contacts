@@ -1,0 +1,13 @@
+<form name="contactNew" novalidate ng-submit="save(contactNew.$valid, contact)">
+	<div class="form-group">
+		<label for="">First Name</label>
+		<input type="text" class="form-control" required ng-model="contact.firstName">
+	</div>
+	<div class="form-group">
+		<label for="">Last Name</label>
+		<input type="text" class="form-control" required ng-model="contact.LastName">
+	</div>
+	<button type="submit" class="btn btn-primary" ng-disabled="contactNew.$invalid">Submit</button>
+</form>
+
+<!-- http://start.jcolemorrison.com/building-an-angular-and-express-app-part-1/ -->

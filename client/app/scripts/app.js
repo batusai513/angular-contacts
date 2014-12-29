@@ -33,8 +33,13 @@ angular
         templateUrl: 'views/contacts.html',
         controller: 'ContactCtrl',
         controllerAs: 'contacts'
-      }).
-      when('/contacts/:id', {
+      })
+      .when('/contacts/new', {
+        templateUrl: 'views/contact-new.html',
+        controller: 'ContactNewCtrl',
+        controllerAs: 'newContact'
+      })
+      .when('/contacts/:id', {
         templateUrl: 'views/contact.html'
       })
       .otherwise({
